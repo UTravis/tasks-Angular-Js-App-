@@ -1,0 +1,10 @@
+<app-add-task
+  (submitEmitter)="newTask($event)"
+></app-add-task>
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (rvTask)="deleteTask(task)"
+  (onToggleEmitter)="toggleReminder(task)"
+>
+</app-task-item>
